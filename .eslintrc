@@ -1,6 +1,0 @@
-{
-  "extends": ["./node_modules/@nihalgonsalves/esconfig/.eslintrc"],
-  "rules": {
-    "@typescript-eslint/no-duplicate-enum-values": "off"
-  }
-}

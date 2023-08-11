@@ -1,9 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "target": "ES5",
-    "declaration": true,
-    "rootDir": "./src"
-  },
-  "files": ["src/PostgresError.ts", "src/index.ts"]
-}

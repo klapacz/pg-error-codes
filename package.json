@@ -1,43 +1,27 @@
 {
-  "name": "pg-error-enum",
-  "version": "0.6.1",
-  "description": "TypeScript Enum for Postgres Errors with no runtime dependencies",
-  "author": "Nihal Gonsalves <nihal@nihalgonsalves.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nihalgonsalves/pg-error-enum.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nihalgonsalves/pg-error-enum/issues"
-  },
-  "homepage": "https://github.com/nihalgonsalves/pg-error-enum#readme",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "name": "pg-error-codes",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "sync": "ts-node --transpile-only bin/sync.ts",
-    "clean": "rm -rf ./dist/",
-    "typecheck": "tsc --noEmit --project tsconfig.json && tsc --noEmit --project tsconfig.build.json",
-    "build": "tsc --build tsconfig.build.json",
-    "lint:check": "eslint --report-unused-disable-directives ./src/ ./bin/ --ext .js,.ts,.jsx,.tsx,.mjs,.mts,.cjs,.cts",
-    "format:check": "prettier . --check",
-    "format:write": "prettier . --write",
-    "test": "node bin/test.js",
-    "prepublishOnly": "npm run build && npm run test"
+    "test": "jest",
+    "generate": "node ./utils/generate.mjs",
+    "check": "pnpm run '/^check:.*/'",
+    "check:lint": "eslint .",
+    "check:format": "prettier . --check"
   },
-  "files": [
-    "dist/**/*"
-  ],
+  "keywords": [],
+  "author": "Korneliusz Łapacz <lapacz.kornel@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^18",
-    "@nihalgonsalves/esconfig": "^0.5.1",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
     "eslint": "^8.46.0",
-    "lefthook": "^1.4.8",
-    "prettier": "^3.0.1",
-    "ts-node": "^10.9.1",
+    "prettier": "3.0.1",
     "typescript": "^5.1.6",
     "zod": "^3.21.4"
+  },
+  "dependencies": {
+    "@types/node": "20.4.9"
   }
 }

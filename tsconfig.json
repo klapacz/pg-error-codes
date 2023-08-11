@@ -1,12 +1,38 @@
 {
-  "extends": "@nihalgonsalves/esconfig",
   "compilerOptions": {
-    "target": "es2020",
-    // TODO: Also publish as ES Module?
-    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "nodenext",
+    "baseUrl": ".",
+    "paths": {},
+    "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
-    "outDir": "./dist"
-  },
-  "files": ["bin/sync.ts", "bin/test.js"]
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": true,
+    "allowUnreachableCode": true,
+    "skipLibCheck": true
+  }
 }

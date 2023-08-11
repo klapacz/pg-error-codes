@@ -21,7 +21,7 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: 'pg-error-enum'
+          package-name: "pg-error-enum"
           bump-minor-pre-major: true
           bump-patch-for-minor-pre-major: true
 
@@ -39,8 +39,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
+          registry-url: "https://registry.npmjs.org"
+          cache: "npm"
       - run: npm ci
       - env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
